@@ -10,12 +10,11 @@ namespace Manage
 {
     public class ManageHotel : IManage<Hotel>
     {
-        public string tablename = "DemoHotel";
+        private const string tablename = "DemoHotel";
 
         public List<Hotel> GetAll()
         {
             List<Hotel> list = StartReader($"select * from {tablename}");
-
             return list;
         }
 
@@ -51,10 +50,8 @@ namespace Manage
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-
                 SqlCommand command = new SqlCommand(queryString, connection);
                 command.Connection.Open();
-
 
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
