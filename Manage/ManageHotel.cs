@@ -43,6 +43,11 @@ namespace Manage
             return hotel;
         }
 
+        /// <summary>
+        /// Connecter til lokal SQL DB og laver det serieliserede svar om til en list med objekter
+        /// </summary>
+        /// <param name="queryString">Tager imod en T-SQL string</param>
+        /// <returns>Returnere en liste med objekter</returns>
         public List<Hotel> StartReader(string queryString)
         {
             string connectionString = "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = HotelDemo; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
@@ -68,6 +73,11 @@ namespace Manage
             }
         }
 
+        /// <summary>
+        /// Eksekvere en T-SQL string på en lokal SQL DB
+        /// </summary>
+        /// <param name="queryString">Tager imod en T-SQL string</param>
+        /// <returns>Returnerer antal rækker ændret i DB</returns>
         public int StartNonQuery(string queryString)
         {
             string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HotelDemo;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
