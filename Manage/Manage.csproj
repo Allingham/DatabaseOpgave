@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManageFacility.cs" />
     <Compile Include="IManage.cs" />
     <Compile Include="ManageHotel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

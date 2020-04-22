@@ -15,15 +15,15 @@ namespace DatabaseOpgave
         {
             //new dbclient().Start("insert into DemoHotel values (8,'TestHotel','Testgade 21, 4000 Roskilde')");
 
-            Hotel hotel = new Hotel(10, "testhotel", "testadresse");
-            new ManageHotel().Create(hotel);
-            Console.WriteLine(new ManageHotel().GetFromId(10));
-            hotel.Name = "DET NYE TEST HOTEL";
-            new ManageHotel().Update(hotel, 10);
-            Console.WriteLine(new ManageHotel().GetFromId(10));
-            new ManageHotel().Delete(10);
+            Facility facility = new Facility(10, "testfacility", "mad");
+            new ManageFacility().Create(facility);
+            Console.WriteLine(new ManageFacility().GetFromId(10));
+            facility.Name = "DET NYE FACILITY";
+            new ManageFacility().Update(facility, 10);
+            Console.WriteLine(new ManageFacility().GetFromId(10));
+            new ManageFacility().Delete(10);
 
-            List<Hotel> list = new ManageHotel().GetAll();
+            List<Facility> list = new ManageFacility().GetAll();
 
             foreach (var VARIABLE in list)
             {

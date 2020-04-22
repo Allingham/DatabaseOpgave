@@ -31,7 +31,7 @@ namespace Manage
         /// <summary>
         /// Opdaterer en objekt i databasen
         /// </summary>
-        /// <param name="obj">De nye værdier til gæsten</param>
+        /// <param name="obj">De nye værdier til objektet</param>
         /// <param name="objNr">Nummer på det objekt der skal opdateres</param>
         /// <returns>Sand hvis der er gået godt ellers falsk</returns>
         bool Update(T obj, int objNr);
