@@ -19,6 +19,11 @@ namespace Models
             Address = address;
         }
 
+        public Hotel()
+        {
+            
+        }
+
         public override string ToString()
         {
             return $"{nameof(Hotel_No)}: {Hotel_No}, {nameof(Name)}: {Name}, {nameof(Address)}: {Address}";

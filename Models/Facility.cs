@@ -19,6 +19,11 @@ namespace Models
             Type = type;
         }
 
+        public Facility()
+        {
+            
+        }
+
         public override string ToString()
         {
             return $"{nameof(Facility_Id)}: {Facility_Id}, {nameof(Name)}: {Name}, {nameof(Type)}: {Type}";
